@@ -1,0 +1,143 @@
+[{
+  "layer": "top",
+  "position": "top",
+  "height": 40,
+  "width": 1900,
+  "output":"eDP-1",
+  "margin-bottom": 0,
+  "spacing": 0,
+  "fixed-center": true,
+  "exclusive": true,
+  "passthrough": false,
+  "gtk-layer-shell": true,
+
+  "modules-left":    ["hyprland/workspaces"],
+  "modules-center":  ["custom/menu","clock"],
+  "modules-right":   ["tray","memory","cpu","pulseaudio","backlight","updates", "battery"],
+
+
+
+  "custom/updates": {
+    "format": " ",
+    "return-type": "json",
+    "exec": "~/.config/waybar/scripts/updates.sh",
+    "interval": 3600,
+    "on-click": "footclient -w 700x500 -H -T system_monitor yay -Syu &",
+    "on-click-right": "exec ~/.config/waybar/scripts/updates.sh",
+    "tooltip": true
+  },
+
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "format-icons": {
+      "1": "",
+      "2": "󰈹",
+      "3": "󰚌",
+      "4": "",
+      "5": "",
+      "6": "󰝚",
+      "7": "󱁤",
+      "8": "󰇚",
+      "9": "󰮯"
+    },
+    "format-active": "{icon}"
+
+  },
+
+  "custom/menu": {
+    "format": " ",
+    "tooltip": false,
+    "on-click": "sleep 0.1 && rofi -show drun",
+    "on-click-right": "sleep 0.1 && swaync-client -t"
+},
+  "tray": {
+    "icon-size": 21,
+    "spacing": 7,
+    "show-passive-items": false
+  },
+
+  "clock": {
+    "interval": 60,
+		"align": 0,
+		"rotate": 0,
+    "timezone": "Asia/Kolkata",
+    "tooltip-format": "<big>{:%B %Y}</big>\n<tt><big>{calendar}</big></tt>",
+    "format": " 󱑍  {:%I:%M %p}  ",
+    "format-alt": "     {:%a %b %d, %G}  "
+  },
+  
+  "cpu": {
+    "interval": 5,
+    "format": ": {usage}%"
+  },
+  
+  
+  "memory": {
+    "interval": 10,
+    "ignore-list": ["network"],
+    "format": " 󰍛 {used:0.1f}G "
+},
+
+
+  "backlight": {
+		"interval": 2,
+		"align": 0,
+		"rotate": 0,
+        "format": "{icon} {percent}%",
+        "format-icons": [""],
+        "on-click": "",
+        "on-click-middle": "",
+        "on-click-right": "",
+        "on-update": "",
+        "on-scroll-up": "light -A 10%",
+        "on-scroll-down": "light -U 10%",
+        "smooth-scrolling-threshold": 1
+    },
+
+
+  "battery": {
+    "states": {
+      "good": 95,
+      "warning": 30,
+      "critical": 20
+    },
+    "format": "{icon} {capacity}%",
+    "format-charging": "  {capacity}%",
+    "format-plugged":  "  {capacity}%",
+    "format-icons": ["", "", "", "", "", "", "", "", "", "", ""],
+    "on-click": "footclient -w 1000x700 -H -T system_monitor btop --utf-force &"
+  },
+
+
+  "disk": {
+    "interval": 30,
+    "format": " 󰋊 {percentage_used}%",
+    "path": "/",
+    "tooltip": true,
+    "tooltip-format": "HDD - {used} used out of {total} on {path} ({percentage_used}%)",
+    "on-click": "footclient -w 700x500 -H -T system_monitor ncdu --color dark &"
+  },
+
+  "pulseaudio": {
+    "format": " {icon} {volume}",
+          "format-muted": "   Mute",
+          "format-bluetooth": " {volume}% {format_source}",
+          "format-bluetooth-muted": " Mute",
+          "format-source": " {volume}",
+          "format-source-muted": "",
+          "format-icons": {
+              "headphone": "",
+              "hands-free": "",
+              "headset": "",
+              "phone": "",
+              "portable": "",
+              "car": "",
+              "default": ["󰕿", "󰖀", "󰕾"]
+        },
+        "scroll-step": 5.0,
+        "on-click": "amixer set Master toggle",
+        "on-click-right": "pavucontrol",
+        "smooth-scrolling-threshold": 1
+    }
+
+}]

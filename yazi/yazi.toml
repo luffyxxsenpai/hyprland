@@ -1,0 +1,46 @@
+# general
+[manager] 
+# this is according to my liking
+sort_dir_first = true
+sort_by = "modified"
+sort_reverse = true
+show_hidden = false
+
+#[opener]
+#edit = [
+#	{ run = 'nvim "$@"', block = true },
+#]
+#play = [
+#	{ run = 'mpv "$@"', orphan = true, for = "unix" },
+#]
+#view = [
+#	{ run = 'gwenview "$@"', orphan = true, for = "unix" },
+#]
+#open = [
+#	{ run = 'xdg-open "$@"', desc = "Open" },
+#]
+
+#[open]
+# set rules for opening specific files
+#rules = [
+#	{ name = "*.mpv", use = "play" },        
+#	{ name = "*.png", use = "view" },        
+#	{ name = "*.jpg", use = "view" },        
+#	{ name = "*.jpeg", use = "view" },        
+
+
+# just examples
+    # For specific directories
+	# { mime = "text/*", use = "edit" },
+	# { mime = "video/*", use = "play" },
+
+    # { mime = "application/json", use = "edit" },
+	# { name = "*.json", use = "edit" },        
+
+	# Multiple openers for a single rule
+	# { name = "*.html", use = [ "open", "edit" ] },
+# ]
+
+
+#For more modifications please visit : 
+#https://yazi-rs.github.io/docs/configuration/yazi

@@ -1,0 +1,70 @@
+*, #workspaces button {
+    margin-left: 1px;
+    margin-right: 5px;
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    font-family: "Hack Nerd Font" ;
+    font-size: 15px;
+}
+
+window#waybar {
+    background: transparent;
+}
+
+window#waybar.hidden {
+    opacity: 0.0;
+}
+
+window {
+    margin-top: 6px;
+    margin-bottom: 6px;
+    padding-left: 1px;
+    padding-right: 1px;
+    transition: none;
+    color: transparent;
+    background: transparent;
+}
+
+
+#custom-updates , #idle_inhibitor ,#pulseaudio, #clock, #memory, #cpu, #tray, #battery, #custom-power, #backlight, #custom-launcher, #workspaces {
+    color: #ffffff;
+    background: #000000;
+    border-radius: 10px;
+}
+
+#custom-launcher {
+    padding-right: 15px;
+    color: #ffffff;
+    background: #000000 ;
+}
+
+#custom-reboot, #custom-shutdown {
+    padding-right: 15px;
+}
+
+#workspaces {
+  padding: 0;
+  padding-left: 1ex;
+  padding-right: 1ex;
+}
+
+#workspaces button {
+  all: initial;
+  border-radius: inherit;
+  padding: 0;
+}
+
+#workspaces button.active {
+  color: #1e1e2e;
+  background: linear-gradient(to bottom right, #f5e0dc, #f5c2e7, #eba0ac);
+}
+
+#workspaces button:hover {
+  background: #eba0ac;
+}
+
+#workspaces button.urgent {
+  background: #f38ba8;
+}

@@ -1,0 +1,51 @@
+# Keymaps
+"$schema" = "https://yazi-rs.github.io/schemas/keymap.json"
+
+[[manager.prepend_keymap]]
+on   = [ "T" ]
+run  = 'close'
+desc = "close tab"
+
+[[manager.prepend_keymap]]
+on   = [ "H" ]
+run  = 'tab_swap -1'
+desc = "swap the to one space back"
+
+[[manager.prepend_keymap]]
+on   = [ "L" ]
+run  = 'tab_swap +1'
+desc = "swap the to one space forward"
+
+
+[[manager.prepend_keymap]]
+on   = [ "<C-h>" ]
+run  = 'help'
+desc = "open help"
+
+[[manager.prepend_keymap]]
+on   = [ "u" ]
+run  = 'undo'
+desc = "for undo the last operation"
+
+[[manager.prepend_keymap]]
+on   = [ "U" ]
+run  = 'redo'
+desc = "for redo the last operation"
+
+# example
+
+#[[manager.prepend_keymap]]
+#on   = [ "<C-a>" ]
+#run  = 'my-fev-command1'
+#desc = "Just for test!"
+
+#[[manager.prepend_keymap]]
+#on  = [ "<C-b>" ]
+#run = 'my-fev-command2'
+
+#[[manager.append_keymap]]
+#on  = [ "<C-c>" ]
+#run = 'my-fev-command3'
+
+#For more modifications please visit : 
+#https://yazi-rs.github.io/docs/configuration/keymap

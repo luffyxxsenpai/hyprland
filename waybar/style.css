@@ -1,3 +1,5 @@
+@define-color border-module #fffff0;
+
 *, #workspaces button {
     margin-left: 1px;
     margin-right: 5px;
@@ -31,19 +33,15 @@ window {
 #custom-updates , #idle_inhibitor ,#pulseaudio, #clock, #memory, #cpu, #tray, #battery, #custom-power, #backlight, #custom-launcher, #workspaces {
     color: #ffffff;
     background: #000000;
-    border-radius: 10px;
+    border-radius: 13px;
+    background-color: #000000;
+    border: 2px solid @border-module;
 }
 
 #custom-launcher {
-    padding-right: 15px;
+    padding-right: 13px;
     color: #ffffff;
-    background: #000000 ;
 }
-
-#custom-reboot, #custom-shutdown {
-    padding-right: 15px;
-}
-
 #workspaces {
   padding: 0;
   padding-left: 1ex;
@@ -57,14 +55,17 @@ window {
 }
 
 #workspaces button.active {
-  color: #1e1e2e;
-  background: linear-gradient(to bottom right, #f5e0dc, #f5c2e7, #eba0ac);
+  color: #ffffff;
+  background: #88c0d0;
 }
 
 #workspaces button:hover {
-  background: #eba0ac;
+  background: #a3be8c ;
+  color: #000000;
 }
 
 #workspaces button.urgent {
-  background: #f38ba8;
+  background: #FF5733;
 }
+
+

@@ -23,8 +23,6 @@
       "8": "8",
       "9": "9",
       "10": "10",
-      "focused": "",
-      "default": ""
     },
     "on-scroll-up": "hyprctl dispatch workspace e+1",
     "on-scroll-down": "hyprctl dispatch workspace e-1",
@@ -63,7 +61,7 @@
 
     "custom/power": {
       	"format":" ⏻ ",
-       	"on-click": "nwgbar",
+       	"on-click": "wlogout",
       	"tooltip": false,
    },
     "custom/launcher": {

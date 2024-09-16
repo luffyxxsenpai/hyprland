@@ -1,5 +1,5 @@
 window {
-    background-color: rgba(30, 30, 46, 1);
+    background-color: #2e3440;
     color: #cdd6f4;
 }
 
@@ -15,7 +15,7 @@ button, image {
 }
 
 button{
-    background: rgba(49, 50, 68, 1);
+    background:#2e3440;
     padding-top: 15px;
     padding-bottom: 15px;
     font-size: small;
